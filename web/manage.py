@@ -2,6 +2,9 @@
 import os
 import sys
 
+from django.conf import settings
+settings.configure(DEBUG=True)
+
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "web.settings")
     try:
