@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import request
 app=Flask(__name__)
 @app.route('/hello')
 def hello_world():
@@ -8,4 +9,4 @@ def hello_world():
 def user(name):
     return '<h1>Hello, %s</h1>' % name
 if __name__=='__main__':
-    app.run()
+    app.run(host='0.0.0.0')
